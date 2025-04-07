@@ -59,4 +59,8 @@ public class Library
             }
         } while (!choice.equalsIgnoreCase("Q"));
     }
+
+    public void printAllBooks() {
+        for (String 1 : library.keySet())
+    }
 }
