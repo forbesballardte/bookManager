@@ -46,7 +46,11 @@ public class Library
             choice = UI.askString("Enter a Choise: ");
             
             if (choice.equalsIgnoreCase("A")) {
-                // add books
+                // Ask for 
+                String bookName = UI.askString("Enter Name of Book: ");
+                String bookAuthor = UI.askString("Enter Author: ");
+                int bookQuantity = UI.askInt("Enter How many Books there are: ");
+                this.addBook(bookName, bookAuthor, bookQuantity);
             } else if (choice.equalsIgnoreCase("F")) {
                 // find a book
             } else if (choice.equalsIgnoreCase("P")) {
@@ -60,9 +64,24 @@ public class Library
         } while (!choice.equalsIgnoreCase("Q"));
     }
 
-    public void printAllBooks() {
-        for (String i : library.values()) {
-            System.out.println("Book name: " + "");
-        }
+    public void addBook(String name, String author, int qty) {
+        currBookId += 1;
+        Book newBook = new Book(currBookId, name, author, qty);
+        library.put(currBookId, newBook);
     }
+
+    public void findBook() {
+
+    }
+
+    public void printAllBooks() {
+        // for (String i : library.values()) {
+            // System.out.println("Book name: " + "");
+        
+    }
+
+    public static void main(String[] args) {
+        new Library().menu();
+    }
+
 }
