@@ -51,11 +51,12 @@ public class Library
                 String bookAuthor = UI.askString("Enter Author: ");
                 int bookQuantity = UI.askInt("Enter How many Books there are: ");
                 this.addBook(bookName, bookAuthor, bookQuantity);
-            } else if (choice.equalsIgnoreCase("F")) {
+            }/* 
+                else if (choice.equalsIgnoreCase("F")) {
                 // find a book
             } else if (choice.equalsIgnoreCase("P")) {
                 printAllBooks();
-            } else if (choice.equalsIgnoreCase("Q")) {
+            }*/  else if (choice.equalsIgnoreCase("Q")) {
                 UI.println("Goodbye");
                 UI.quit();
             } else {
